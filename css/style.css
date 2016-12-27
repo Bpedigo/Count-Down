@@ -1,0 +1,26 @@
+li {
+  display: inline;
+  color:green;
+}
+
+#page_warp{
+  background: black;
+}
+
+body {
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+	background: #00ECB9;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+#container{
+/*   background-color: yellow; */
+/*   background: linear-gradient(to right, red , yellow); */
+/*   background: radial-gradient(white 5%,blue 15%, green 60%); */
+  margin-top: 30px;
+  border: 2px solid;
+  border-radius: 25px;
+}
