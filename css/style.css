@@ -1,26 +1,50 @@
 li {
+  font-size: 45px;
   display: inline;
-  color:green;
+  color: orange;
 }
 
-#page_warp{
-  background: black;
+h1 { 
+ font-family: 'Baloo', cursive;
+ font-size: 50px;
 }
 
 body {
+  color: white;
   margin: 0 auto;
-  width: 800px;
+  margin-left: auto;
   text-align: center;
-	background: #00ECB9;
-  font-family: sans-serif;
-  font-weight: 100;
+	background: #455166;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 10;
+}
+
+/*button{
+  margin: 0 auto;
+}*/
+
+p{
+ /*text-align: left;*/
+/* font-size: 90%;*/
 }
 
 #container{
-/*   background-color: yellow; */
-/*   background: linear-gradient(to right, red , yellow); */
-/*   background: radial-gradient(white 5%,blue 15%, green 60%); */
-  margin-top: 30px;
-  border: 2px solid;
-  border-radius: 25px;
+  min-height: 98px;
+}
+ 
+#button-container{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    float: left; 
+    margin: 15px;
+    white-space: normal;
+ 
+
 }

@@ -1,43 +1,72 @@
+
+
+
 var stop; //just incase we want to stop the count downs
 var today = new Date();
+var holidayDate = null;
+var countDown = $("li.days");
+var until = $("h3.until");
+var holiday = null;
 
-$("#year").html("Christmas: " + importantDate("Dec 25 "));
-$("#newYear").html("New Years: " + importantDate("Jan 1 "));
-$("#hallowWeen").html("Halloween: " + importantDate("Oct 31 "));
-
-function hide(){
-  $("#christmas").hide();
-  $("#newYears").hide();
-  $("#hallowWeens").hide();
-}
-
-function holiday(box){
-  switch(box){
-    case 0:
-      return $("#christmas");
-      break;
-    case 1:
-      return $("#newYears");
-      break;
-    case 2:
-      return $("#hallowWeens");
-      break;
-            }
-}
 
 $("#christ").click(function(){
-  hide();
-  holiday(0).show();
+  holidayDate = "Dec 25 ";
+  holiday = "Christmass ";
 });
 
  $("#newY").click(function(){
-   hide();
-   holiday(1).show();
+   holidayDate = "Jan 1 "
+   holiday ="New Years ";
  });
 
 $("#hall").click(function(){
-  hide();
-  holiday(2).show();
+  holidayDate = "Oct 31 ";
+  holiday = "Halloween ";
+});
+
+$("#than").click(function(){
+  holidayDate = "Nov 23 ";
+  holiday = "Thanksgiving ";
+});
+
+$("#july").click(function(){
+  holidayDate = "July 4 ";
+  holiday = "Independence Day ";
+});
+
+$("#vets").click(function(){
+  holidayDate = "Nov 11 ";
+  holiday = "Veterans Day ";
+});
+
+$("#colu").click(function(){
+  holidayDate = "Oct 9 ";
+  holiday = "Columbus Day ";
+});
+
+$("#labo").click(function(){
+  holidayDate = "Sep 4 ";
+  holiday = "Labor Day ";
+});
+
+$("#memo").click(function(){
+  holidayDate = "May 29 ";
+  holiday = "Memorial Day ";
+});
+
+$("#pres").click(function(){
+  holidayDate = "Feb 20 ";
+  holiday = "Presidents Day ";
+});
+
+$("#mlk").click(function(){
+  holidayDate = "Jan 16 ";
+  holiday = "Martin Luther King Jr. Day ";
+});
+
+$("#fath").click(function(){
+  holidayDate = "Jun 18 ";
+  holiday = "Father's Day ";
 });
 
 function importantDate(string) {
@@ -50,6 +79,7 @@ function importantDate(string) {
 }
 
 function getTimeRemaining(endtime) {
+ 
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
@@ -65,30 +95,16 @@ function getTimeRemaining(endtime) {
 }
 
 function update() {
-  //Xmas
-  var xXmas = importantDate("Dec 25 ");
+  if(holidayDate === null ){
+    console.log("holidays is empty");
+  } else {
+  var xXmas = importantDate(holidayDate);
   var t = getTimeRemaining(xXmas);
-  $("li.days").html(t.days);
-  $("li.hours").html(t.hours);
-  $("li.minutes").html(t.minutes);
-  $("li.seconds").html(t.seconds);
-  //New Years
-  var nNewYear = importantDate("Jan 1 ")
-  var n = getTimeRemaining(nNewYear);
-  $("li.nyDays").html(n.days);
-  $("li.nyHours").html(n.hours);
-  $("li.nyMinutes").html(n.minutes);
-  $("li.nySeconds").html(n.seconds);
-  //hallowWeen
-  var halloWeen = importantDate("Oct 31 ")
-  var j = getTimeRemaining(halloWeen);
-  $("li.hDays").html(j.days);
-  $("li.hHours").html(j.hours);
-  $("li.hMinutes").html(j.minutes);
-  $("li.hSeconds").html(j.seconds);
+  until.html(holiday + " will be here in: ");
+  countDown.html(t.days + " days " + t.hours + " hours " + t.minutes + " minutes " + t.seconds + " seconds ");
+  }
 }
 
 $(function() {
   stop = setInterval(update, 1000);
-  hide();
 });
