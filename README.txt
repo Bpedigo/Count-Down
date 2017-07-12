@@ -1,5 +1,5 @@
-The projects purpose is to show the count down of days, hours, minutes and seconds away form the present a holiday is. The user chooses which holiday and a counter appears.
+The projects purpose is to show a count down from now until the holiday that was picked. Also, only plain javaScript and CSS was used on this project
 
-To view this on git-hub pages you can find it at  https://bpedigo.github.io/Count-Down/
+To see this project on my git-hub clicke on this link  https://bpedigo.github.io/Count-Down/
 
-A Pen created at CodePen.io. You can find this one at http://codepen.io/bpedigo/pen/WoPrXV.
+To view the Pen created at CodePen.io. You can find this one at http://codepen.io/bpedigo/pen/WoPrXV.
