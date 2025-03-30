@@ -1,92 +1,95 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Time Until App</title> 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link href="https://fonts.googleapis.com/css?family=Baloo|Dosis" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Countdown App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Dosis:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="#page_warp"> 
-   <div class="row">
-    <div class="col-xl-5">
-        <h1>The Count Down App!</h1>
-        <h3 class = "until" >How long until ____?</h3>            
-        <div id = "container">
-          <ul>
-            <li class = "days"></li>
-          </ul>       
-        </div> 
-        <h4>press a button to start the count down!</h4>
+    <main class="container">
+        <header>
+            <h1>Holiday Countdown</h1>
+            <h2 class="countdown-text">How long until <span class="holiday-name">____</span>?</h2>
+        </header>
 
-      <div id= "button-container">
-        <button id="christ" type="button" class="btn btn-success btn-lg">
-          <span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>      
-          <p>Xmas</p> 
-       </button>
-        <button id="newY" type="button" class="btn btn-primary btn-lg">
-          <span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
-          <p>New Years</p> 
-       </button>
-        <button id="hall" type="button" class="btn btn-warning btn-lg">
-          <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-          <p>Halloween</p> 
-       </button>
-        <button id="than" type="button" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-grain" aria-hidden="true"></span> 
-          <p>Thanks- giving</p>
-       </button>
-       <button id="july" type="button" class="btn btn-danger btn-lg">
-          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-          <p>4 of July</p> 
-       </button>
+        <div class="countdown-display">
+            <div class="countdown" role="timer" aria-live="polite">
+                <span class="days"></span>
+            </div>
+            <div class="share-buttons">
+                <button class="share-btn" data-platform="twitter" aria-label="Share on Twitter">
+                    <span class="icon">🐦</span>
+                    <span class="label">Twitter</span>
+                </button>
+                <button class="share-btn" data-platform="whatsapp" aria-label="Share on WhatsApp">
+                    <span class="icon">📱</span>
+                    <span class="label">WhatsApp</span>
+                </button>
+                <button class="share-btn" data-platform="facebook" aria-label="Share on Facebook">
+                    <span class="icon">📘</span>
+                    <span class="label">Facebook</span>
+                </button>
+                <button class="share-btn" data-platform="copy" aria-label="Copy to clipboard">
+                    <span class="icon">📋</span>
+                    <span class="label">Copy</span>
+                </button>
+            </div>
+        </div>
 
-     
-        <button id="vets" type="button" class="btn btn-success btn-lg">
-          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>      
-          <p>Veterans Day</p> 
-       </button>
-        <button id="colu" type="button" class="btn btn-primary btn-lg">
-          <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-          <p>Columbus Day</p> 
-       </button>
-        <button id="labo" type="button" class="btn btn-warning btn-lg">
-          <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
-          <p>Labor Day</p> 
-       </button>
-        <button id="memo" type="button" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span> 
-          <p>Memorial Day</p> 
-       </button>
-       <button id="pres" type="button" class="btn btn-danger btn-lg">
-          <span class="glyphicon glyphicon-lamp" aria-hidden="true"></span>
-          <p>Presidents Day</p> 
-       </button>
+        <div class="button-grid">
+            <button class="holiday-btn" data-holiday="christmas" aria-label="Countdown to Christmas">
+                <span class="icon">🎄</span>
+                <span class="label">Christmas</span>
+            </button>
+            <button class="holiday-btn" data-holiday="new-year" aria-label="Countdown to New Year">
+                <span class="icon">🎉</span>
+                <span class="label">New Year</span>
+            </button>
+            <button class="holiday-btn" data-holiday="halloween" aria-label="Countdown to Halloween">
+                <span class="icon">👻</span>
+                <span class="label">Halloween</span>
+            </button>
+            <button class="holiday-btn" data-holiday="thanksgiving" aria-label="Countdown to Thanksgiving">
+                <span class="icon">🦃</span>
+                <span class="label">Thanksgiving</span>
+            </button>
+            <button class="holiday-btn" data-holiday="independence-day" aria-label="Countdown to Independence Day">
+                <span class="icon">🎆</span>
+                <span class="label">Independence Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="veterans-day" aria-label="Countdown to Veterans Day">
+                <span class="icon">🎖️</span>
+                <span class="label">Veterans Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="columbus-day" aria-label="Countdown to Columbus Day">
+                <span class="icon">🌍</span>
+                <span class="label">Columbus Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="labor-day" aria-label="Countdown to Labor Day">
+                <span class="icon">💼</span>
+                <span class="label">Labor Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="memorial-day" aria-label="Countdown to Memorial Day">
+                <span class="icon">🇺🇸</span>
+                <span class="label">Memorial Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="presidents-day" aria-label="Countdown to Presidents Day">
+                <span class="icon">🏛️</span>
+                <span class="label">Presidents Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="mlk-day" aria-label="Countdown to MLK Jr. Day">
+                <span class="icon">✊</span>
+                <span class="label">MLK Jr. Day</span>
+            </button>
+            <button class="holiday-btn" data-holiday="fathers-day" aria-label="Countdown to Father's Day">
+                <span class="icon">👨</span>
+                <span class="label">Father's Day</span>
+            </button>
+        </div>
+    </main>
 
-     
-        <button id="mlk" type="button" class="btn btn-success btn-lg">
-          <span class="glyphicon glyphicon-king" aria-hidden="true"></span>      
-          <p>MLK Jr. Day</p> 
-        </button>
-
-         <button id="fath" type="button" class="btn btn-primary btn-lg ">
-          <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>      
-          <p>Father's Day</p> 
-        </button>
-
-  
-
-
-
-
-    </div>
-  </div>
- </div>
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-  <script src="js/index.js"></script>
-​‌
+    <script src="js/index.js"></script>
 </body>
 </html>
